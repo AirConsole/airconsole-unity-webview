@@ -297,16 +297,16 @@ static BOOL inEditor;
         [view scrollWheel:scrollEvent];
     }
 
-    @synchronized(self) {
-        if (refreshBitmap) {
-            if (bitmap == nil) {
-                bitmap = [[webView bitmapImageRepForCachingDisplayInRect:webView.frame] retain];
-            }
-            memset([bitmap bitmapData], 0, [bitmap bytesPerRow] * [bitmap pixelsHigh]);
-            [webView cacheDisplayInRect:webView.frame toBitmapImageRep:bitmap];
-        }
-        needsDisplay = refreshBitmap;
-    }
+//    @synchronized(self) {
+//        if (refreshBitmap) {
+//            if (bitmap == nil) {
+//                bitmap = [[webView bitmapImageRepForCachingDisplayInRect:webView.frame] retain];
+//            }
+//            memset([bitmap bitmapData], 0, [bitmap bytesPerRow] * [bitmap pixelsHigh]);
+//            [webView cacheDisplayInRect:webView.frame toBitmapImageRep:bitmap];
+//        }
+//        needsDisplay = refreshBitmap;
+//    }
 }
 
 - (int)bitmapWide
@@ -332,37 +332,37 @@ static BOOL inEditor;
 
 - (void)render
 {
-    @synchronized(self) {
-        if (webView == nil)
-            return;
-        if (!needsDisplay)
-            return;
-        if (bitmap == nil)
-            return;
-
-        int samplesPerPixel = (int)[bitmap samplesPerPixel];
-        int rowLength = 0;
-        int unpackAlign = 0;
-        glGetIntegerv(GL_UNPACK_ROW_LENGTH, &rowLength);
-        glGetIntegerv(GL_UNPACK_ALIGNMENT, &unpackAlign);
-        glPixelStorei(GL_UNPACK_ROW_LENGTH, (GLint)[bitmap bytesPerRow] / samplesPerPixel);
-        glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-        glBindTexture(GL_TEXTURE_2D, textureId);
-        if (![bitmap isPlanar] && (samplesPerPixel == 3 || samplesPerPixel == 4)) {
-            glTexSubImage2D(
-                GL_TEXTURE_2D,
-                0,
-                0,
-                0,
-                (GLsizei)[bitmap pixelsWide],
-                (GLsizei)[bitmap pixelsHigh],
-                samplesPerPixel == 4 ? GL_RGBA : GL_RGB,
-                GL_UNSIGNED_BYTE,
-                [bitmap bitmapData]);
-        }
-        glPixelStorei(GL_UNPACK_ROW_LENGTH, rowLength);
-        glPixelStorei(GL_UNPACK_ALIGNMENT, unpackAlign);
-    }
+//    @synchronized(self) {
+//        if (webView == nil)
+//            return;
+//        if (!needsDisplay)
+//            return;
+//        if (bitmap == nil)
+//            return;
+//
+//        int samplesPerPixel = (int)[bitmap samplesPerPixel];
+//        int rowLength = 0;
+//        int unpackAlign = 0;
+//        glGetIntegerv(GL_UNPACK_ROW_LENGTH, &rowLength);
+//        glGetIntegerv(GL_UNPACK_ALIGNMENT, &unpackAlign);
+//        glPixelStorei(GL_UNPACK_ROW_LENGTH, (GLint)[bitmap bytesPerRow] / samplesPerPixel);
+//        glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+//        glBindTexture(GL_TEXTURE_2D, textureId);
+//        if (![bitmap isPlanar] && (samplesPerPixel == 3 || samplesPerPixel == 4)) {
+//            glTexSubImage2D(
+//                GL_TEXTURE_2D,
+//                0,
+//                0,
+//                0,
+//                (GLsizei)[bitmap pixelsWide],
+//                (GLsizei)[bitmap pixelsHigh],
+//                samplesPerPixel == 4 ? GL_RGBA : GL_RGB,
+//                GL_UNSIGNED_BYTE,
+//                [bitmap bitmapData]);
+//        }
+//        glPixelStorei(GL_UNPACK_ROW_LENGTH, rowLength);
+//        glPixelStorei(GL_UNPACK_ALIGNMENT, unpackAlign);
+//    }
 }
 
 - (void)addCustomRequestHeader:(const char *)headerKey value:(const char *)headerValue
