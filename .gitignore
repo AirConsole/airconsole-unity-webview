@@ -9,3 +9,6 @@ Temp
 !**/*.xcworkspace/contents.xcworkspacedata
 sample/UserSettings
 sample/obj
+
+plugins/iOS/build
+plugins/Mac/build
