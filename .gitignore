@@ -1,5 +1,9 @@
+
+
 Library
 Temp
+UserSettings
+obj
 *.csproj
 *.sln
 *.pidb
@@ -7,8 +11,6 @@ Temp
 **/*.xcodeproj/*
 !**/*.xcodeproj/project.pbxproj
 !**/*.xcworkspace/contents.xcworkspacedata
-sample/UserSettings
-sample/obj
 
 plugins/iOS/build
 plugins/Mac/build
