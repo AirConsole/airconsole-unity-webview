@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.airconsole.webview": "file:/Users/marc/development/libraries/ndream-unity-webview/package",
     "com.unity.ide.rider": "3.0.25",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.test-framework": "1.1.33",

@@ -1,5 +1,5 @@
 #!/bin/bash
-DSTDIR="../../build/Packager/Assets/Plugins"
+DSTDIR="../../package/Runtime/Plugins"
 rm -rf DerivedData
 xcodebuild -target WebView -configuration Release -arch x86_64 -arch arm64 build CONFIGURATION_BUILD_DIR='DerivedData' | xcbeautify
 xcodebuild -target WebViewSeparated -configuration Release -arch x86_64 -arch arm64 build CONFIGURATION_BUILD_DIR='DerivedData' | xcbeautify

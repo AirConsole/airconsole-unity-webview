@@ -23,14 +23,20 @@
 using UnityEditor;
 using UnityEngine;
 using System;
+using System.IO;
 
-public class Packager
+namespace NDream.Unity
 {
-	public static void Export()
+	public class Packager
 	{
-		AssetDatabase.ExportPackage(
-			new string[]{"Assets/Plugins", "Assets/WebPlayerTemplates"},
-			"unity-webview.unitypackage",
-			ExportPackageOptions.Recurse);
+		[MenuItem("AirConsole/Package webview")]
+		public static void Export()
+		{
+			string outputPath = Path.Combine("..", "dist", $"airconsole-webview-v{VersionInfo.VERSION}.unitypackage");
+			Debug.Log($"Exporting to {outputPath}");
+			
+			AssetDatabase.ExportPackage(new string[] { "Assets/Plugins", "Assets/WebPlayerTemplates" }, outputPath, ExportPackageOptions.Recurse);
+			Application.OpenURL("file://" + Path.GetDirectoryName(Path.Combine(Application.dataPath, "..", outputPath)));
+		}
 	}
 }
