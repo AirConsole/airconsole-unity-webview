@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.0]
+## [1.0.0] - 2023-10-10
 
 - Added version information for unitypackage and WebViewObject
 - Updated OSX bundle to include an Intel and ARM universal binary

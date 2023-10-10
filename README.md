@@ -1,6 +1,6 @@
-# ndream-unity-webview
+# airconsole-unity-webview
 
-ndream-unity-webview is a plugin for Unity 5 and higher.
+airconsole-unity-webview is a plugin for Unity 5 and higher.
 The goal is to bring it to the highest possible performance in its respective target use cases.
 
 It is opmtised for usage in the [AirConsole Unity Plugin](https://github.com/airconsole/airconsole-unity-plugin) where it provides
