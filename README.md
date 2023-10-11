@@ -11,9 +11,13 @@ It is opmtised for usage in the [AirConsole Unity Plugin](https://github.com/air
 | OSX      | WebRTC, WebSockets                                           |
 | Windows  | At this time,  Windows is not supported as per version 1.0.0 |
 
-## Change Log
+## Installation
 
-Please see [Change Log](./CHANGES.md) for details.
+1. Open the Unity Package Manager under `Window > Package Manager`
+2. Add a GIT Package pointing to `https://github.com/AirConsole/airconsole-unity-webview.git?path=/package#v1.0.0` for version v1.0.0 or
+  1. `https://github.com/AirConsole/airconsole-unity-webview.git?path=/package` for the latest version
+
+For changes in the version please check [Change Log](./CHANGELOG.md) or [Github Releases](https://github.com/AirConsole/airconsole-unity-webview/releases).
 
 unity-webview is derived from
 
@@ -26,7 +30,7 @@ It is placed under `sample/`. You can open it and import the plugin as
 below:
 
 1. Open `sample/Assets/Sample.unity`.
-2. Open `dist/ndream-unity-webview-v1.0.0.unitypackage` and import all files.
+2. The sample project has a local unity package reference to the `Package` directory
 
 ## Platform Specific Notes
 
