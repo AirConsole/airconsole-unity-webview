@@ -4,7 +4,7 @@
 
 Release notes follow the [keep a changelog](https://keepachangelog.com/en/1.1.0/) format.
 
-## [Unreleased]
+## [1.0.0]
 
 ### New Features
 
