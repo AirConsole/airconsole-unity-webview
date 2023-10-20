@@ -553,7 +553,7 @@ public class WebViewObject : MonoBehaviour
 
     public int Progress()
     {
-#if UNITY_WEBPLAYER
+#if UNITY_WEBPLAYER || UNITY_WEBGL
         //TODO: UNSUPPORTED
         return 0;
 #elif UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
@@ -572,7 +572,7 @@ public class WebViewObject : MonoBehaviour
 
     public bool CanGoBack()
     {
-#if UNITY_WEBPLAYER
+#if UNITY_WEBPLAYER || UNITY_WEBGL
         //TODO: UNSUPPORTED
         return false;
 #elif UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
@@ -591,7 +591,7 @@ public class WebViewObject : MonoBehaviour
 
     public bool CanGoForward()
     {
-#if UNITY_WEBPLAYER
+#if UNITY_WEBPLAYER || UNITY_WEBGL
         //TODO: UNSUPPORTED
         return false;
 #elif UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
@@ -706,7 +706,7 @@ public class WebViewObject : MonoBehaviour
 
     public string GetCustomHeaderValue(string headerKey)
     {
-#if UNITY_WEBPLAYER
+#if UNITY_WEBPLAYER || UNITY_WEBGL
         //TODO: UNSUPPORTED
         return null;
 #elif UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN

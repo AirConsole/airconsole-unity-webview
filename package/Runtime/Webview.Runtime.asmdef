@@ -1,10 +1,10 @@
 {
     "name": "com.airconsole.webview.runtime",
-    "rootNamespace": "",
     "references": [],
     "includePlatforms": [
         "Android",
-        "Editor"
+        "Editor",
+        "WebGL"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

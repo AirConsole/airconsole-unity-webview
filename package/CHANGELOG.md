@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.1] - 2023-10-20
+
+- Fixed a WebGL related build error in WebViewObject.
+- Updated the Runtime Assembly Definition for WebGL
+
 ## [1.0.0] - 2023-10-10
 
 - Added version information for unitypackage and WebViewObject
