@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.1] - 2023-10-20
+## [1.0.1] - 2023-10-21
 
 - Fixed a WebGL related build error in WebViewObject.
 - Updated the Runtime Assembly Definition for WebGL

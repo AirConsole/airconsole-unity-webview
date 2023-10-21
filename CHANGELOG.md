@@ -4,7 +4,17 @@
 
 Release notes follow the [keep a changelog](https://keepachangelog.com/en/1.1.0/) format.
 
-## [1.0.0]
+## [Unreleased]
+
+
+## [1.0.1] - 2023-10-21
+
+### Fixed
+
+- Fixed a WebGL related build error in WebViewObject.
+- Updated the Runtime Assembly Definition for WebGL
+
+## [1.0.0] - 2023-10-10
 
 ### New Features
 
